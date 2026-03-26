@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --bg: #111110;
       --ink: #d4d2cc;
       --muted: #F8F8F7;
       --rule: #2a2a28;
       --accent: #7a9cbf;
+      --dim: #888884;
     }
-
     body {
       background: var(--bg);
       color: var(--ink);
@@ -29,14 +27,12 @@
       display: flex;
       flex-direction: column;
     }
-
     main {
       max-width: 560px;
       margin: 0 auto;
       padding: 96px 32px 80px;
       flex: 1;
     }
-
     h1 {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 13px;
@@ -45,19 +41,16 @@
       color: var(--muted);
       margin-bottom: 48px;
     }
-
     .tagline {
       font-size: 0.95rem;
       color: var(--muted);
       font-weight: 300;
     }
-
     hr {
       border: none;
       border-top: 1px solid var(--rule);
       margin: 52px 0;
     }
-
     .projects-label {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
@@ -66,7 +59,6 @@
       color: var(--muted);
       margin-bottom: 24px;
     }
-
     /* ── To add a new project, copy one <a class="project"> block below ── */
     .project {
       display: block;
@@ -75,11 +67,9 @@
       padding: 16px 0;
       border-bottom: 1px solid var(--rule);
     }
-
     .project:first-of-type {
       border-top: 1px solid var(--rule);
     }
-
     .project-title {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.9rem;
@@ -88,15 +78,35 @@
       margin-bottom: 3px;
       transition: opacity 0.15s;
     }
-
     .project:hover .project-title {
       opacity: 0.55;
     }
-
     .project-desc {
       font-size: 0.88rem;
       color: var(--muted);
       font-weight: 300;
+    }
+
+    /* ── Playlists — quieter than projects ── */
+    .playlists-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: 16px;
+    }
+    .playlist {
+      display: inline-block;
+      text-decoration: none;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--dim);
+      margin-right: 24px;
+      transition: color 0.15s;
+    }
+    .playlist:hover {
+      color: var(--accent);
     }
 
     footer {
@@ -115,30 +125,33 @@
       <h1>supercooled.org</h1>
       <p class="tagline">a metastable place for projects.</p>
     </header>
-
     <hr>
-
     <p class="projects-label">Projects</p>
-
     <!-- ================================================================
          TO ADD A NEW PROJECT: copy the block below, update href,
          .project-title, and .project-desc, then save and push.
          ================================================================ -->
-
     <a class="project" href="https://heatflux.supercooled.org/">
       <div class="project-title">heat_flux</div>
       <div class="project-desc">Water Surface Heat Flux Analysis for Frazil Ice Production Forecasting</div>
     </a>
-
     <a class="project" href="https://historicheatflux.supercooled.org/">
       <div class="project-title">historic_heat_flux</div>
       <div class="project-desc">Water Surface Heat Flux Analysis for Frazil Ice Production Hindcasting</div>
     </a>
-
     <!-- END PROJECTS -->
 
-  </main>
+    <hr>
 
+    <!-- ================================================================
+         PLAYLISTS: add more <a class="playlist"> as needed
+         ================================================================ -->
+    <p class="playlists-label">Video Playlists</p>
+    <a class="playlist" href="https://www.youtube.com/playlist?list=PLRS6CJEr8W3-G2ZGEEH_nLPmNqk_tubhu" target="_blank" rel="noopener">antarctic</a>
+    <a class="playlist" href="https://www.youtube.com/playlist?list=PLRS6CJEr8W3-7QX1Le-Vr9Xnf9FLUrGz4" target="_blank" rel="noopener">ice_navigation</a>
+    <!-- END PLAYLISTS -->
+
+  </main>
   <footer>supercooled.org</footer>
 </body>
 </html>
